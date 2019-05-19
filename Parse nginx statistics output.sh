@@ -1,0 +1,1 @@
+ $ i=$(curl -s server/nginx_stats); IFS=$'\n'; i=($i); a=${i[0]/Active connections: } && a=${a/ }; r=${i[2]# [0-9]* [0-9]* }; echo "Active: $a, requests: $r"
